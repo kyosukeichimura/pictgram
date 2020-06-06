@@ -27,4 +27,9 @@ render :new
     session.delete(:user_id)
     @current_user = nil
   end
+  
+  def user_params
+    params.require(:user).permit(:name, :email)
+  end
+  
 end
