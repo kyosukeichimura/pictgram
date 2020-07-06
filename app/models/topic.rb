@@ -4,9 +4,9 @@ class Topic < ApplicationRecord
   validates :image, presence: true
   
   belongs_to :user
-  has_secure_password
+  
 
-  has_many :topics
+  
   
   mount_uploader :image, ImageUploader
 end
