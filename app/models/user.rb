@@ -6,5 +6,5 @@ class User < ApplicationRecord
   VALID_PASSWORD_REGEX=/\A(?=.*?[a-z])(?=.*?\d)[a-z\d]{8,32}\z/i
   validates :password, format: { with: VALID_PASSWORD_REGEX }
   has_many :topics
-  
+  has_many :favorites
 end
